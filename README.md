@@ -12,3 +12,5 @@ npm run serve
 to view the application navigate to http://localhost:8080/
 The "case study" page demonstrates a mock shutterstock site with images using the imgMARK watermark. Drag these images off of the page to see
 the punched out watermark.
+
+The frontend of this code sample uses the VueJS framework. This was used due to time constraints during the 24 hour hackathon, as Vue has a quick setup time.
