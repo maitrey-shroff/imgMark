@@ -1,7 +1,7 @@
 # imgMARK
 image watermarking tool - Hackathon build. Developer Camp 2019
 
-This is a hackathon built project that lays the groundwork for an image watermarking tool. The tool encrypts a hidden watermark in photos
+This is a hackathon-built project that lays the groundwork for an image watermarking tool. The tool encrypts a hidden watermark in photos
 by "punching out" a hole in the photo and layering the punched out watermark behind the image. This ensures that anyone attempting to display
 a stolen image will have a portion of the photo missing.
 
