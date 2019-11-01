@@ -7,6 +7,7 @@ a stolen image will have a portion of the photo missing.
 
 This code can be run by completing the following steps in terminal:
 npm install
+
 npm run serve
 
 to view the application navigate to http://localhost:8080/
