@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>ImgMark</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: #ccc
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but imgmark doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <canvas id="myCanvas" width="808" height="600"></canvas>
+    <!-- built files will be auto injected -->
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var watermark = new Image(),
+        mark = new Image();
+
+
+
+    // watermark.src = 'https://res.cloudinary.com/filmfest/image/upload/e_cut_out,l_imgmark:logo/v1549190369/imgmark/img02.png';
+    // mark.src = 'https://res.cloudinary.com/filmfest/image/upload/e_cut_out,fl_cutter,l_imgmark:logo/v1549190369/imgmark/img02.png';
+    watermark.src = "http://res.cloudinary.com/filmfest/image/upload/t_imagemark-watermark/v1549190372/imgmark/img02.png"
+    mark.src = "http://res.cloudinary.com/filmfest/image/upload/t_imgmark-cutter/imgmark/img02.png"
+
+
+    var draw = function () {
+        context.webkitImageSmoothingEnabled = false;
+        context.mozImageSmoothingEnabled = false;
+        context.imageSmoothingEnabled = false; /// future
+
+        mark.onload = function () {
+
+            // context.shadowColor = "white";
+            // context.shadowBlur = 40;
+            // context.shadowOffsetX = 0;
+            // context.shadowOffsetY = 0;
+
+            context.drawImage(mark, 0, 0);
+            // context.scale(4, 4)
+
+
+
+
+
+        };
+
+        watermark.onload = function () {
+            context.drawImage(watermark, 0, 0);
+        };
+
+
+    };
+
+    draw();
+
+</script>
+
+</html>
